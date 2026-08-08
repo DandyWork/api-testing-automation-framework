@@ -1,5 +1,5 @@
 import pytest
-
+from utils.schema_validator import validate_schema
 
 @pytest.mark.booking
 def test_get_booking_by_id(
@@ -25,4 +25,9 @@ def test_get_booking_by_id(
 
     assert response.json["lastname"] == (
         created_booking["payload"]["lastname"]
+    )
+
+    validate_schema(
+        response.json, 
+        "schemas/booking_detail_schema.json"
     )

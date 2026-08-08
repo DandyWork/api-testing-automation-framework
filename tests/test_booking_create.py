@@ -2,7 +2,6 @@ import pytest
 from utils.test_data_reader import load_test_data
 from utils.schema_validator import validate_schema
 
-
 booking_data = load_test_data(
     "booking_data.json"
 )
@@ -17,15 +16,13 @@ def test_create_booking_success(booking_api):
         payload
     )
 
-
     assert response.status_code == 200
-
 
     response_body = response.json
 
     validate_schema(
         response_body,
-        "schemas/booking_schema.json"
+        "schemas/booking_create_schema.json"
     )
 
     assert "bookingid" in response_body

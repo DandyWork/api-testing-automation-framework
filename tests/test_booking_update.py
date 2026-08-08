@@ -1,6 +1,7 @@
 import pytest
 
 from utils.test_data_reader import load_test_data
+from utils.schema_validator import validate_schema
 
 
 booking_data = load_test_data(
@@ -27,7 +28,11 @@ def test_update_booking(
         auth_token
     )
 
-
+    validate_schema(
+        response.json,
+        "schemas/booking_detail_schema.json"
+    )
+    
     assert response.status_code == 200
 
 

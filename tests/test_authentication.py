@@ -1,5 +1,6 @@
 import pytest
 from utils.test_data_reader import load_test_data
+from utils.schema_validator import validate_schema
 
 auth_data = load_test_data(
     "auth_data.json"
@@ -16,6 +17,7 @@ def test_login_success(auth_api):
         user["password"]
     )
 
+    validate_schema(response.json, "schemas/auth_schema.json")
 
     assert response.status_code == user["expected_status"]
 
