@@ -1,0 +1,25 @@
+{
+    "valid_booking": {
+        "firstname": "John",
+        "lastname": "Doe",
+        "totalprice": 150,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2026-08-10",
+            "checkout": "2026-08-15"
+        },
+        "additionalneeds": "Breakfast"
+    },
+
+    "updated_booking": {
+        "firstname": "John Updated",
+        "lastname": "Doe Updated",
+        "totalprice": 200,
+        "depositpaid": false,
+        "bookingdates": {
+            "checkin": "2026-08-12",
+            "checkout": "2026-08-18"
+        },
+        "additionalneeds": "Dinner"
+    }
+}

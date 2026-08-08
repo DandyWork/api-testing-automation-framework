@@ -1,0 +1,28 @@
+{
+    "valid_user": {
+        "username": "admin",
+        "password": "password123",
+        "expected_status": 200
+    },
+
+    "invalid_password": {
+        "username": "admin",
+        "password": "wrongpassword",
+        "expected_status": 200,
+        "expected_message": "Bad credentials"
+    },
+
+    "missing_username": {
+        "username": "",
+        "password": "password123",
+        "expected_status": 200,
+        "expected_message": "Bad credentials"
+    },
+
+    "missing_password": {
+        "username": "admin",
+        "password": "",
+        "expected_status": 200,
+        "expected_message": "Bad credentials"
+    }
+}

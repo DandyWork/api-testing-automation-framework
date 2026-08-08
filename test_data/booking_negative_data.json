@@ -1,0 +1,27 @@
+{
+    "missing_firstname": {
+        "payload": {
+            "lastname": "Doe",
+            "totalprice": 150,
+            "depositpaid": true,
+            "bookingdates": {
+                "checkin": "2026-08-10",
+                "checkout": "2026-08-15"
+            }
+        },
+        "expected_status": 500
+    },
+
+    "missing_lastname": {
+        "payload": {
+            "firstname": "John",
+            "totalprice": 150,
+            "depositpaid": true,
+            "bookingdates": {
+                "checkin": "2026-08-10",
+                "checkout": "2026-08-15"
+            }
+        },
+        "expected_status": 500
+    }
+}
