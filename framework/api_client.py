@@ -1,8 +1,6 @@
 import requests
-
 from framework.api_response import APIResponse
 from utils.logger import get_logger
-
 
 class APIClient:
 
